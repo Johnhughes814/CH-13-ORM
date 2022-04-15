@@ -3,7 +3,6 @@ const { Category, Product } = require("../../models");
 
 // The `/api/categories` endpoint
 
-// the root '/' means localhost:3000/api/categories/ where the last slash is the defined route, '/'
 router.get("/", (req, res) => {
   // find all categories
   Category.findAll({
@@ -38,9 +37,7 @@ router.get("/:id", (req, res) => {
   })
     .then((categoriesDB) => {
       if (!categoriesDB) {
-        res
-          .status(404)
-          .json({ message: "This ID is not associated with any categories." });
+        res.status(404).json({ message: "No categories with that ID found!" });
         return;
       }
       res.json(categoriesDB);
@@ -72,9 +69,7 @@ router.put("/:id", (req, res) => {
   })
     .then((categoriesDB) => {
       if (!categoriesDB) {
-        res
-          .status(404)
-          .json({ message: "This ID is not associated with any categories." });
+        res.status(404).json({ message: "No category found with this id" });
         return;
       }
       res.json(categoriesDB);
@@ -94,9 +89,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((categoriesDB) => {
       if (!categoriesDB) {
-        res
-          .status(404)
-          .json({ message: "This ID is not associated with any categories." });
+        res.status(404).json({ message: "No category found with that id." });
         return;
       }
       res.json(categoriesDB);
