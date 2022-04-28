@@ -9,7 +9,7 @@
 ## Description
 A command-line application built from scratch that manages a company's employee database.
 
-### ![DEMO_IMAGE_OR_MOVIE](https://github.com/Johnhughes814/CH-12-Employee-Tracker/raw/main/demo.gif)
+[![DEMO](https://www.freepnglogos.com/uploads/youtube-logo-icon-png-11.png)](https://www.youtube.com/watch?v=EJrkPAw8eoA)
 
 
 ## Table of Contents
